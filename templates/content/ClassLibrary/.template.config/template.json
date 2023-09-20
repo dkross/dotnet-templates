@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "DKrOSS",
+  "classifications": [
+    "DKrOSS",
+    "Library"
+  ],
+  "name": "DKrOSS Class Library",
+  "description": "Create an empty class library",
+  "precedence": "200",
+  "identity": "DKrOSS.DotNet.Templates.ClassLibrary",
+  "shortName": [
+    "dkross.lib"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ClassLib1",
+  "defaultName": "ClassLib1"
+}

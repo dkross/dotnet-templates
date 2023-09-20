@@ -20,7 +20,7 @@
 
   <PropertyGroup>
     <MinVerTagPrefix>v</MinVerTagPrefix>
-    <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+    <MinVerMinimumMajorMinor>0.1</MinVerMinimumMajorMinor>
     <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
 
