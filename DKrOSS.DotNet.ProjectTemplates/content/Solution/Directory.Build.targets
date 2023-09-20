@@ -1,5 +1,6 @@
 <Project>
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="$(JetBrainsAnnotationsVersion)"/>
+    <PackageReference Include="MinVer" PrivateAssets="All" Version="$(MinVerVersion)" />
   </ItemGroup>
 </Project>
