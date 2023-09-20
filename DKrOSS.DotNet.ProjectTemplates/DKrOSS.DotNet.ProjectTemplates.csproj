@@ -15,8 +15,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>dotnet-new;templates;dkross</PackageTags>
     <PackageType>Template</PackageType>
-    <!-- <PackageVersion>0.0.0</PackageVersion> -->
     <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
