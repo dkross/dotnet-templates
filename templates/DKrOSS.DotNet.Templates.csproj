@@ -4,7 +4,7 @@
     <Authors>DKrOSS</Authors>
     <ContentTargetFolders>content</ContentTargetFolders>
     <DebugType>none</DebugType>
-    <Description>Common project templates</Description>
+    <Description>DKrOSS templates for dotnet new</Description>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
     <Language>en-us</Language>
