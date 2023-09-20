@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "DKrOSS",
+  "classifications": [
+    "DKrOSS",
+    "Solution"
+  ],
+  "name": "DKrOSS Solution",
+  "description": "Create a solution containing no projects",
+  "precedence": "200",
+  "identity": "DKrOSS.DotNet.Templates.Solution",
+  "shortName": [
+    "dkross.sln"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "Solution1",
+  "defaultName": "Solution1",
+  "guids": [
+    "702CF8DD-F906-46E7-B8F2-3F9DBB92F251"
+  ],
+  "symbols": {
+    "git": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "Initialize Git repository"
+    },
+    "gitUpstreamUrl": {
+      "type": "parameter",
+      "datatype": "string",
+      "description": "Set git's upstream url",
+      "isEnabled": "git == true",
+      "defaultValue": "",
+      "replaces": "##GitUpstreamUrl##"
+    },
+    "enableGitRemoteAdd": {
+      "type": "generated",
+      "generator": "switch",
+      "replaces": "##GitRemoteAdd##",
+      "parameters": {
+        "cases": [
+          {
+            "condition": "(gitUpstreamUrl != '')",
+            "value": ""
+          },
+          {
+            "condition": "(gitUpstreamUrl == '')",
+            "value": "#"
+          }
+        ]
+      }
+    }
+  },
+  "postActions": [
+    {
+      "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "args": {
+        "executable": "powershell.exe",
+        "args": "-f .postAction.git.ps1",
+        "redirectStandardOutput": false,
+        "redirectStandardError": false
+      },
+      "manualInstructions": [
+        {
+          "text": "Run 'powershell.exe -f .postAction.git.ps1'"
+        }
+      ],
+      "continueOnError": false,
+      "description ": "Initialize Git repository",
+      "condition": "(OS == 'Windows_NT' && git == true)"
+    }
+  ]
+}

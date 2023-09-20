@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>DKrOSS</Authors>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <DebugType>none</DebugType>
+    <Description>Common project templates</Description>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <Language>en-us</Language>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>$(NoWarn);NU5128;NU5110,NU5111</NoWarn>
+    <PackageId>DKrOSS.DotNet.ProjectTemplates</PackageId>
+    <PackageProjectUrl>https://github.com/dkross/dotnet-templates</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>dotnet-new;templates;dkross</PackageTags>
+    <PackageType>Template</PackageType>
+    <!-- <PackageVersion>0.0.0</PackageVersion> -->
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="**\*" />
+    <Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**" PackagePath="content" />
+    <None Include="README.md" Pack="true" PackagePath="." />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" PrivateAssets="All" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,1 @@
+# DKrOSS.DotNet.ProjectTemplates
