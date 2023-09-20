@@ -4,6 +4,7 @@ on:
     tags:
       - v1.*
   workflow_dispatch:
+  
 jobs:
   push:
     runs-on: ubuntu-latest
