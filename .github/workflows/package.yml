@@ -2,7 +2,7 @@ name: Package
 on:
   push:
     tags:
-      - v1.*
+      - v0.*
   workflow_dispatch:
 jobs:
   push:
