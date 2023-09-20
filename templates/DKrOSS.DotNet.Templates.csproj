@@ -10,7 +10,7 @@
     <Language>en-us</Language>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>$(NoWarn);NU5128;NU5110,NU5111</NoWarn>
-    <PackageId>DKrOSS.DotNet.ProjectTemplates</PackageId>
+    <PackageId>DKrOSS.DotNet.Templates</PackageId>
     <PackageProjectUrl>https://github.com/dkross/dotnet-templates</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>dotnet-new;templates;dkross</PackageTags>
