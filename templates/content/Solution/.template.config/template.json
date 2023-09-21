@@ -22,31 +22,39 @@
   ],
   "symbols": {
     "git": {
+      "description": "Initialize Git repository",
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
-      "description": "Initialize Git repository"
+      "defaultValue": "false"
     },
-    "gitUpstreamUrl": {
+    "gitRemoteAlias": {
+      "description": "Alias of the upstream server",
+      "isEnabled": "git == true",
       "type": "parameter",
       "datatype": "string",
-      "description": "Set git's upstream url",
+      "defaultValue": "origin",
+      "replaces": "##GitRemoteAlias##"
+    },
+    "gitRemoteUrl": {
+      "description": "URL of the upstream server",
       "isEnabled": "git == true",
+      "type": "parameter",
+      "datatype": "string",
       "defaultValue": "",
-      "replaces": "##GitUpstreamUrl##"
+      "replaces": "##GitRemoteUrl##"
     },
     "enableGitRemoteAdd": {
       "type": "generated",
       "generator": "switch",
-      "replaces": "##GitRemoteAdd##",
+      "replaces": "##EnableGitRemoteAdd##",
       "parameters": {
         "cases": [
           {
-            "condition": "(gitUpstreamUrl != '')",
+            "condition": "(gitRemoteUrl != '')",
             "value": ""
           },
           {
-            "condition": "(gitUpstreamUrl == '')",
+            "condition": "(gitRemoteUrl == '')",
             "value": "#"
           }
         ]
@@ -55,6 +63,8 @@
   },
   "postActions": [
     {
+      "description ": "Initialize Git repository",
+      "condition": "(OS == 'Windows_NT' && git == true)",
       "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
       "args": {
         "executable": "powershell.exe",
@@ -67,9 +77,7 @@
           "text": "Run 'powershell.exe -f .postAction.git.ps1'"
         }
       ],
-      "continueOnError": false,
-      "description ": "Initialize Git repository",
-      "condition": "(OS == 'Windows_NT' && git == true)"
+      "continueOnError": false
     }
   ]
 }

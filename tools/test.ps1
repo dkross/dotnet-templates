@@ -1,7 +1,9 @@
 Set-Location $PSScriptRoot
 dotnet new install ../templates
 
-dotnet new dkross.sln -o temp -n Temp --allow-scripts yes -g -gi https://github.com/dkross/git-test.git
+dotnet new dkross.sln -o temp -n Temp --allow-scripts yes `
+    --git-init `
+    --git-remote-url https://github.com/dkross/git-test.git
 
 Set-Location temp
 dotnet new dkross.lib -o src/lib -n DKrOSS.Lib
