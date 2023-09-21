@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "DKrOSS",
+  "classifications": [
+    "DKrOSS",
+    "Common"
+  ],
+  "name": "Class",
+  "description": "Creates a new C# class",
+  "precedence": "0",
+  "identity": "DotNet.Common.Class.CSharp",
+  "shortName": [
+    "dkross.class"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "Class1",
+  "defaultName": "Class1",
+  "preferDefaultName": true,
+  "primaryOutputs": [
+    {
+      "path": "Class1.cs"
+    }
+  ],
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "Company.ClassLibrary1"
+    },
+    "ImplicitUsings": {
+      "type": "bind",
+      "binding": "msbuild:ImplicitUsings",
+      "datatype": "string",
+      "defaultValue": "disable"
+    }
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
+  }
+}
