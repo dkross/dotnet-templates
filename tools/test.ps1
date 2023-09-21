@@ -11,9 +11,10 @@ Set-Location temp
 dotnet new dkross.lib -o src/lib -n DKrOSS.Lib
 dotnet sln add src/lib/DKrOSS.Lib.csproj
 
-# Class Test
+# Item Templates Test
 Push-Location src/lib
 dotnet new dkross.class -n Settings
+dotnet new dkross.interface -n ISettings
 Pop-Location
 
 # ConsoleApp Test
