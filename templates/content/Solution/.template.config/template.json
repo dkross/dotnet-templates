@@ -107,8 +107,7 @@
             ".gitignore",
             "Directory.Build.*",
             "global.json",
-            "Solution1.sln",
-            "Solution1.sln.DotSettings"
+            "Solution1.sln"
           ],
           "rename": {
             ".editorconfig-generic": ".editorconfig",
