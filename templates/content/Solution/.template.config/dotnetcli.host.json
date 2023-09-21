@@ -20,6 +20,10 @@
     "gitRemoteUrl": {
       "longName": "git-remote-url",
       "shortName": ""
+    },
+    "generic": {
+      "longName": "generic",
+      "shortName": ""
     }
   }
 }

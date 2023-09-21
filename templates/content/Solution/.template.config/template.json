@@ -21,17 +21,17 @@
     "702CF8DD-F906-46E7-B8F2-3F9DBB92F251"
   ],
   "symbols": {
-    "copyrightOwner":{
+    "copyrightOwner": {
       "description": "Copyright owner",
       "type": "parameter",
-      "datatype":"string",
+      "datatype": "string",
       "defaultValue": "Daniel Kraemer (DKrOSS)",
       "replaces": "##CopyrightOwner##"
     },
-    "copyrightEMail":{
+    "copyrightEMail": {
       "description": "Copyright e-mail address",
       "type": "parameter",
-      "datatype":"string",
+      "datatype": "string",
       "defaultValue": "contact@dkross.org",
       "replaces": "##CopyrightEMail##"
     },
@@ -57,6 +57,12 @@
       "defaultValue": "",
       "replaces": "##GitRemoteUrl##"
     },
+    "generic": {
+      "description": "Don't add .NET specific files",
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
     "enableGitRemoteAdd": {
       "type": "generated",
       "generator": "switch",
@@ -74,7 +80,7 @@
         ]
       }
     },
-    "year":{
+    "year": {
       "type": "generated",
       "generator": "now",
       "replaces": "##Year##",
@@ -83,6 +89,36 @@
       }
     }
   },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!generic)",
+          "exclude": [
+            "*-generic"
+          ]
+        },
+        {
+          "condition": "(generic)",
+          "exclude": [
+            ".idea/**/*",
+            ".editorconfig",
+            ".gitattributes",
+            ".gitignore",
+            "Directory.Build.*",
+            "global.json",
+            "Solution1.sln",
+            "Solution1.sln.DotSettings"
+          ],
+          "rename": {
+            ".editorconfig-generic": ".editorconfig",
+            ".gitattributes-generic": ".gitattributes",
+            ".gitignore-generic": ".gitignore"
+          }
+        }
+      ]
+    }
+  ],
   "postActions": [
     {
       "description ": "Initialize Git repository",

@@ -1,0 +1,9 @@
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+[Pp]ublish/
+[Tt]emp/
+
+Thumbs.db
+Desktop.ini
+.DS_Store
