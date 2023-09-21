@@ -21,6 +21,20 @@
     "702CF8DD-F906-46E7-B8F2-3F9DBB92F251"
   ],
   "symbols": {
+    "copyrightOwner":{
+      "description": "Copyright owner",
+      "type": "parameter",
+      "datatype":"string",
+      "defaultValue": "Daniel Kraemer (DKrOSS)",
+      "replaces": "##CopyrightOwner##"
+    },
+    "copyrightEMail":{
+      "description": "Copyright e-mail address",
+      "type": "parameter",
+      "datatype":"string",
+      "defaultValue": "contact@dkross.org",
+      "replaces": "##CopyrightEMail##"
+    },
     "git": {
       "description": "Initialize Git repository",
       "type": "parameter",
@@ -58,6 +72,14 @@
             "value": "#"
           }
         ]
+      }
+    },
+    "year":{
+      "type": "generated",
+      "generator": "now",
+      "replaces": "##Year##",
+      "parameters": {
+        "format": "yyyy"
       }
     }
   },
