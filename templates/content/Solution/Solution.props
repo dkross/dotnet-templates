@@ -1,6 +1,7 @@
 <Project>
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>11.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -21,7 +22,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(STRONG_NAME_KEYS_DIR)/DKrOSS.snk</AssemblyOriginatorKeyFile>
     <DebugType>none</DebugType>
   </PropertyGroup>
