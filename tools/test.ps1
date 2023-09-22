@@ -23,9 +23,9 @@ dotnet new dkross.class -n Settings
 dotnet new dkross.interface -n ISettings
 Pop-Location
 
-# # ConsoleApp Test
-# dotnet new dkross.console -o src/ConsoleApp -n DKrOSS.ConsoleApp
-# dotnet sln add src/ConsoleApp/DKrOSS.ConsoleApp.csproj
+# ConsoleApp Test
+dotnet new dkross.console -o src/ConsoleApp -n DKrOSS.ConsoleApp --allow-scripts yes `
+    --solution-path ../../Temp.sln
 
 Read-Host "Press ENTER to start cleanup..."
 Set-Location $PSScriptRoot
