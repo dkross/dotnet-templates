@@ -1,6 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
+    "solutionPath": {
+      "longName": "solution-path",
+      "shortName": "s"
+    },
     "skipRestore": {
       "longName": "no-restore",
       "shortName": ""

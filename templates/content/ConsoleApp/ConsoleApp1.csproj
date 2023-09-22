@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(MSBuildProjectDirectory)/../../Solution.props" />
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />
 </Project>

@@ -14,8 +14,8 @@ dotnet new dkross.sln -o temp/dotnet -n Temp --allow-scripts yes `
 
 # ClassLibrary Test
 Set-Location temp/dotnet
-dotnet new dkross.lib -o src/lib -n DKrOSS.Lib
-dotnet sln add src/lib/DKrOSS.Lib.csproj
+dotnet new dkross.lib -o src/lib -n DKrOSS.Lib --allow-scripts yes `
+    --solution-path ../../Temp.sln
 
 # Item Templates Test
 Push-Location src/lib
@@ -24,8 +24,8 @@ dotnet new dkross.interface -n ISettings
 Pop-Location
 
 # ConsoleApp Test
-dotnet new dkross.console -o src/ConsoleApp -n DKrOSS.ConsoleApp
-dotnet sln add src/ConsoleApp/DKrOSS.ConsoleApp.csproj
+dotnet new dkross.console -o src/ConsoleApp -n DKrOSS.ConsoleApp --allow-scripts yes `
+    --solution-path ../../Temp.sln
 
 Read-Host "Press ENTER to start cleanup..."
 Set-Location $PSScriptRoot
