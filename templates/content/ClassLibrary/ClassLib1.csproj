@@ -5,5 +5,9 @@
     <!-- <TargetFramework>netstandard2.0</TargetFramework> -->
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="." />
+  </ItemGroup>
+
   <Import Project="$(MSBuildProjectDirectory)/../../Solution.targets" />
 </Project>
